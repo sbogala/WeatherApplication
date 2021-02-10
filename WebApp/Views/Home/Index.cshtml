@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model WebApp.Models.Period
+
+<div class="text-center">
+    <h1 class="display-4">Current Weather</h1>
+</div>
+<div class="widget">
+    <h4>@Model.ShortForecast</h4>
+    <div class="left-panel panel">
+        <div class="date">
+            @DateTime.Now.ToString("dddd, dd MMMM yyyy")
+        </div>
+        <div class="city">
+            <img width="20px" src="https://cdn1.iconfinder.com/data/icons/feather-2/24/wind-128.png" />@Model.WindSpeed, @Model.WindDirection
+        </div>
+        <div class="temp">
+            <img src="@Model.Icon" alt="" width="60">
+            @Model.Temperature&deg;@Model.TemperatureUnit
+        </div>
+    </div>
+    <div class="right-panel panel">
+        <div width="160">@Model.DetailedForecast</div>
+    </div>
+
+</div>

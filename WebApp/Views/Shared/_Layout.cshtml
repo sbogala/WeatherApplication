@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Weather App</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/1.2/css/weather-icons.min.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark border-bottom box-shadow mb-3">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="weather mt-2">
+                        <div class="svg">
+                            <svg version="1.1" id="rainclouds" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="29.7px" height="30.85px" viewBox="0 0 297 308.5" enable-background="new 0 0 297 308.5" xml:space="preserve">
+                            <g class="weather__raindrops">
+                            <g class="raindrops--right">
+                            <path class="weather__raindrops--1" d="M165.5,171.4c2.4-4.6,2.6-25.3,2.6-25.3s-16.8,12.3-19.2,16.8c-2.4,4.6-0.6,10.2,4,12.5
+          C157.6,177.7,163.2,176,165.5,171.4L165.5,171.4z M165.5,171.4" />
+
+                            <path class="weather__raindrops--2" d="M200,171.4c2.4-4.6,2.6-25.3,2.6-25.3s-16.8,12.3-19.1,16.8c-2.4,4.6-0.6,10.2,4,12.5
+          C192.1,177.7,197.7,176,200,171.4L200,171.4z M200,171.4" />
+
+                            <path class="weather__raindrops--3" d="M224.6,175.4c4.6,2.4,10.2,0.6,12.5-4c2.4-4.6,2.6-25.3,2.6-25.3s-16.8,12.3-19.2,16.8
+          C218.3,167.4,220.1,173,224.6,175.4L224.6,175.4z M224.6,175.4" />
+
+                            <path class="weather__raindrops--4" d="M161,209.9c4.6,2.4,10.2,0.6,12.5-4c2.4-4.6,2.6-25.3,2.6-25.3s-16.8,12.2-19.2,16.8
+          C154.6,201.9,156.4,207.5,161,209.9L161,209.9z M161,209.9" />
+
+                            <path class="weather__raindrops--5" d="M195.5,209.9c4.6,2.4,10.2,0.6,12.5-4c2.4-4.6,2.6-25.3,2.6-25.3s-16.8,12.2-19.2,16.8
+          C189.1,201.9,190.9,207.5,195.5,209.9L195.5,209.9z M195.5,209.9" />
+
+      </g>
+                            <g class="raindrops--left">
+                            <path class="weather__raindrops--6" d="M68.5,205.9c2.4-4.6,2.6-25.3,2.6-25.3S54.4,192.8,52,197.3c-2.4,4.6-0.6,10.2,4,12.5
+          C60.6,212.2,66.2,210.4,68.5,205.9L68.5,205.9z M68.5,205.9" />
+
+                            <path class="weather__raindrops--7" d="M103,205.9c2.4-4.6,2.6-25.3,2.6-25.3s-16.8,12.3-19.1,16.8c-2.4,4.6-0.6,10.2,4,12.5
+          C95.1,212.2,100.7,210.4,103,205.9L103,205.9z M103,205.9" />
+
+                            <path class="weather__raindrops--8" d="M127.6,209.9c4.6,2.4,10.2,0.6,12.5-4c2.4-4.6,2.6-25.3,2.6-25.3s-16.8,12.3-19.2,16.8
+          C121.3,201.9,123.1,207.5,127.6,209.9L127.6,209.9z M127.6,209.9" />
+
+                            <path class="weather__raindrops--9" d="M64,244.3c4.6,2.4,10.2,0.6,12.5-4c2.4-4.6,2.6-25.3,2.6-25.3S62.4,227.2,60,231.8
+          C57.6,236.4,59.4,242,64,244.3L64,244.3z M64,244.3" />
+
+                            <path class="weather__raindrops--10" d="M98.5,244.3c4.6,2.4,10.2,0.6,12.5-4c2.4-4.6,2.6-25.3,2.6-25.3s-16.8,12.2-19.2,16.8
+          C92.1,236.4,93.9,242,98.5,244.3L98.5,244.3z M98.5,244.3" />
+
+      </g>
+        </g>
+                            <g class="weather__clouds">
+                            <path d="M142.5,127.8c0,0-31.4-6.7-31.4-36.7
+              s26.7-39.9,36.5-39.9s13.3,1.6,13.3,1.6s4.4-36.9,41.2-36.9s41.5,36.4,41.4,39.8c0,3.4,0.2,4.8-0.6,9.2c0,0,5.2-1.7,12.6-1.7
+              c10.8,0,30.1,8,30.1,34s-30.4,30.6-30.4,30.6H142.5z" />
+
+                            <path d="M46.2,164.7c0,0-31.4-6.7-31.4-36.7
+              s26.7-39.9,36.5-39.9s13.3,1.6,13.3,1.6s4.4-36.9,41.2-36.9s41.5,36.4,41.4,39.8c0,3.4,0.2,4.8-0.6,9.2c0,0,5.2-1.7,12.6-1.7
+              c10.8,0,30.1,8,30.1,34s-30.4,30.6-30.4,30.6H46.2z" />
+
+        </g>
+                            <g class="weather__lightning">
+                            <polygon points="125.436,171.75 111.1,195.781 133.401,190.239 111.1,235.75 145.6,180.6 126.35,185.6 138,171.75
+            " />
+
+                            <polygon points="207.686,144.42 193.35,168.451 215.651,162.909 193.35,208.42 227.85,153.27 208.6,158.27
+            220.249,144.42 " />
+
+        </g>
+      </svg>
+                        </div>
+
+                    </div>
+                </div>
+                <a class="navbar-brand text-light ml-1" asp-area="" asp-controller="Home" asp-action="Index">Weather</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container text-center">
+            &copy; 2021 - Weather
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
